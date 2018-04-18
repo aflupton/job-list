@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Jobs List</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="Display-1"><em>Confirmation of Deletion</em></h1>
+
+      <h3>You've deleted a job from the list. Navigate back to the site by clicking one of the following options.</h3>
+      <br>
+      <form action="/list" method="post">
+        <button type="submit" class="btn btn-info">View List</button>
+      </form>
+      <br>
+      <form action="/create" method="get">
+        <button type="submit" class="btn btn-info">Add Job</button>
+      </form>
+      <br>
+      <form action="/" method="get">
+        <button type="submit" class="btn btn-info">Home</button>
+      </form>
+        <!-- <div class="row">
+          <div class="col-md-2">
+            <button type='submit' class='btn btn-info'><em>See list</em></a></button>
+          </div>
+          <div class="col-md-2">
+            <button type='submit' class='btn btn-info'><a href="/CreateItem"><em>Add a job</em></a></button>
+          </div>
+        </div> -->
+
+
+    </div>
+  </body>
+</html>
