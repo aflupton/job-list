@@ -13,17 +13,17 @@
         <div class="col-md-4">
           <ul>
               @{var count = 0;}
-              @foreach(var instance in Model)
+              @foreach(var item in Model)
               {
                 count++;
                 <div class="row">
                     <h4><strong>List instance: #@count</strong></h4>
-                    <p><em><strong>Job Title: </strong></em>@instance.GetName()</p>
-                    <p><em><strong>Dates in job: </strong></em>@instance.GetDate()</p>
-                    <p><em><strong>Keywords: </strong></em>@instance.GetKeyword()</p>
-                    <p><em><strong>Description: </strong></em>@instance.GetDescription()</p>
+                    <p><em><strong>Job Title: </strong></em>@item.GetName()</p>
+                    <p><em><strong>Dates in job: </strong></em>@item.GetDate()</p>
+                    <p><em><strong>Keywords: </strong></em>@item.GetKeyword()</p>
+                    <p><em><strong>Description: </strong></em>@item.GetDescription()</p>
                     <p><strong>@Html.ActionLink("Delete", "Delete", new
-                      {id=@instance.GetId()})</strong></p>
+                      {id=@item.GetId()})</strong></p>
                 </div>
                 <br>
                 <br>
