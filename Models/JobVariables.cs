@@ -7,16 +7,16 @@ namespace JobsList.Models
     private string _name;
     private string _date;
     private string _keyword;
-    private string _description;
+    private string _other;
     private int _id;
     public static List<JobVariables> _instances = new List<JobVariables> {};
 
-    public JobVariables(string name, string date, string keyword, string description)
+    public JobVariables(string name, string date, string keyword, string other)
     {
       _name = name;
       _date = date;
       _keyword = keyword;
-      _description = description;
+      _other = other;
       _id = _instances.Count;
     }
 
@@ -44,13 +44,13 @@ namespace JobsList.Models
     {
       _keyword = newKeyword;
     }
-    public string GetDescription()
+    public string GetOther()
     {
-      return _description;
+      return _other;
     }
-    public void SetDescription(string newDescription)
+    public void SetOther(string newOther)
     {
-      _description = newDescription;
+      _other = newOther;
     }
     public int GetId()
     {

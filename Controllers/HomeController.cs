@@ -14,7 +14,8 @@ namespace JobsList.Controllers
     [HttpGet("/list")]
     public ActionResult List()
     {
-      return View("List");
+      List<JobVariables> allJobs = JobVariables.GetAll();
+      return View("List", allJobs);
     }
     [HttpGet("/create")]
     public ActionResult Create()
@@ -27,8 +28,8 @@ namespace JobsList.Controllers
       var Name = (Request.Form["name"]);
       var Date = (Request.Form["date"]);
       var Keyword = (Request.Form["keyword"]);
-      var Description = (Request.Query["description"]);
-      JobVariables newJob = new JobVariables(Name, Date, Keyword, Description);
+      var Other = (Request.Query["other"]);
+      JobVariables newJob = new JobVariables(Name, Date, Keyword, Other);
       newJob.Save();
       List<JobVariables> allJobs = JobVariables.GetAll();
       return View("List", allJobs);

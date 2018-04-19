@@ -21,7 +21,7 @@
                     <p><em><strong>Job Title: </strong></em>@item.GetName()</p>
                     <p><em><strong>Dates in job: </strong></em>@item.GetDate()</p>
                     <p><em><strong>Keywords: </strong></em>@item.GetKeyword()</p>
-                    <p><em><strong>Description: </strong></em>@item.GetDescription()</p>
+                    <p><em><strong>Description: </strong></em>@item.GetOther()</p>
                     <p><strong>@Html.ActionLink("Delete", "Delete", new
                       {id=@item.GetId()})</strong></p>
                 </div>
